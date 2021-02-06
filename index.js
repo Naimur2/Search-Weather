@@ -13,8 +13,12 @@ const weatherImgs={
 
 
 };
+ fetch (`http://api.openweathermap.org/data/2.5/weather?id=524901&appid=f6ac34ed76a847a5fab2dbce2ce86ea5`)
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(err =>console.log("error"+err.message));
 let CurrentTemperature= location =>{
-    fetch(`https://api.weatherstack.com/current?access_key=ea378c552d112c70720216c31793cf34&query=${location}`)
+    fetch(`http://api.weatherstack.com/current?access_key=ea378c552d112c70720216c31793cf34&query=${location}`)
     .then(response => response.json())
     .then(data => {
         let condition=(data.current.weather_descriptions)[0];
