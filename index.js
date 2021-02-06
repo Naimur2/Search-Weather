@@ -1,7 +1,7 @@
 const text=document.querySelector(".search");
 const button=document.querySelector(".input");
 const weatherDesc=document.querySelector(".content");
-
+const test=document.querySelector(".test");
 const weatherImgs={
  sunny:"sunny.png",
  partlycloudy:"partiallycloudy.png",
@@ -40,12 +40,17 @@ let CurrentTemperature= location =>{
     .catch(err=> console.log(err));
     
 };
+
 let city="Dhaka";
 CurrentTemperature(city);
 fetch (`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=f6ac34ed76a847a5fab2dbce2ce86ea5`)
 .then(response => response.json())
-.then(data => alert(data))
+.then(data => {test.innerHTML=data.weather[0].main;
+console.log(data.weather);
+})
 .catch(err =>alert(err));
+
+
 button.addEventListener("click",()=>{
     let loc=text.value;
     if (loc==="") {
