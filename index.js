@@ -44,7 +44,7 @@ let city="Dhaka";
 CurrentTemperature(city);
 fetch (`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=f6ac34ed76a847a5fab2dbce2ce86ea5`)
 .then(response => response.json())
-.then(data => console.log(data))
+.then(data => alert(data))
 .catch(err =>console.log("error"+err.message));
 button.addEventListener("click",()=>{
     let loc=text.value;
