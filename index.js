@@ -31,7 +31,7 @@ let CurrentTemperature= location =>{
                     <h2 class="weather-place">${data.name}</h2>
                 <div style="background-image:url('${imgLink}')" class="weather-image"></div>
                 <h2 class="weather-situation">${condition}</h2>
-                <h1 class="weather-temperature">${Math.floor(data.main.temp-274)}° c</h1>`
+                <h1 class="weather-temperature">${Math.floor(data.main.temp-273.5)}° c</h1>`
                 weatherDesc.innerHTML=weather;
                 
             console.log(data);
