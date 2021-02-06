@@ -12,7 +12,18 @@ const weatherImgs={
  snow:"snow.png"
 
 };
-
+function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+      console.log("Geolocation is not supported by this browser.");
+    }
+  }
+  
+  function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude +
+    "<br>Longitude: " + position.coords.longitude;
+  }
 let CurrentTemperature= location =>{
     fetch (`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=0019ca273ae4f8f0f3f77508e385b3ce`)
             .then(response => response.json())

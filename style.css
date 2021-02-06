@@ -74,11 +74,11 @@
 .weather {
   background: rgba(255, 255, 255, 0.6);
   z-index: 200;
-  height: 80%;
+  height: auto;
   left: 15%;
   top: 10%;
   width: 70%;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(52, 44, 97, 0.8);
   border-radius: 10px;
   position: absolute;
   text-align: center;
@@ -92,25 +92,29 @@
   background-image: url(images/7-70206_weather-symbols-partly-cloudy.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 150px;
-  width: 150px;
+  height: 9.4rem;
+  width: 9.4rem;
   margin: 5px 0;
+  padding-bottom: 1rem;
 }
 .weather-temperature {
   font-family: "Lilita One", cursive;
   margin: 5px 0;
   font-size: 3.5rem;
+  padding-bottom: 4rem;
 }
 .weather-situation {
   color: rgba(0, 0, 0, 0.8);
   font-family: "Oswald", sans-serif;
   margin: 5px 0;
+  padding-bottom: 1rem;
   font-size: 1.8rem;
 }
 .weather-place {
   margin: 5px 0;
   font-family: "Oswald", sans-serif;
   font-size: 1.8rem;
+  padding-bottom: 1rem;
   color: rgba(0, 0, 0, 0.8);
 }
 .weather-place::first-letter {
