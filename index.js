@@ -37,7 +37,7 @@ let CurrentTemperature= location =>{
       console.log(data.current.weather_icons);
         
     })
-    .catch(err=> alert("Invalid City Name"));
+    .catch(err=> console.log(err));
     
 };
 let city="Dhaka";
