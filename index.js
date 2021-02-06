@@ -21,8 +21,7 @@ function getLocation() {
   }
   
   function showPosition(position) {
-    x.innerHTML = "Latitude: " + position.coords.latitude +
-    "<br>Longitude: " + position.coords.longitude;
+   console.log(position);
   }
 let CurrentTemperature= location =>{
     fetch (`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=0019ca273ae4f8f0f3f77508e385b3ce`)
