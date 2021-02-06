@@ -36,7 +36,7 @@ let CurrentTemperature= location =>{
                 
             console.log(data);
             })
-            .catch(err =>alert("Something went wrong"));
+            .catch(err =>alert("Please Check Your Input and try again"));
     // fetch(`http://api.weatherstack.com/current?access_key=ea378c552d112c70720216c31793cf34&query=${location}`)
     // .then(response => response.json())
     // .then(data => {
