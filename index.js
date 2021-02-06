@@ -62,6 +62,7 @@ let CurrentTemperature= location =>{
                             
                         })
                         .catch(err=> alert("Error"));
+                        //s
             }
 };
 
